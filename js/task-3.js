@@ -1,10 +1,12 @@
 const inputField = document.querySelector("#name-input");
 const outputText = document.querySelector("#name-output");
-inputField.addEventListener("input", (event) => { 
+
+inputField.addEventListener("input", (event) => {
     const trimmedValue = inputField.value.trim();
+    
     if (trimmedValue === '') {
-        return 'Anonymous'
+        outputText.textContent = 'Anonymous';
     } else {
-        return outputText.textContent = trimmedValue;  
+        outputText.textContent = trimmedValue;
     }
 });
